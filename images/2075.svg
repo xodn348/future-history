@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="skyThrive" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a3d2e"/>
+      <stop offset="0.45" stop-color="#0f5c43"/>
+      <stop offset="0.8" stop-color="#1d8a5e"/>
+      <stop offset="1" stop-color="#2fae74"/>
+    </linearGradient>
+    <linearGradient id="skyDecline" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2418"/>
+      <stop offset="0.5" stop-color="#5a4a30"/>
+      <stop offset="0.85" stop-color="#8a7148"/>
+      <stop offset="1" stop-color="#a8895a"/>
+    </linearGradient>
+    <linearGradient id="seamBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1430"/>
+      <stop offset="0.5" stop-color="#13245c"/>
+      <stop offset="1" stop-color="#1b2f6e"/>
+    </linearGradient>
+    <radialGradient id="sunThrive" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff4c2"/>
+      <stop offset="0.4" stop-color="#ffe08a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffe08a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunDecline" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d9b98a"/>
+      <stop offset="0.5" stop-color="#b89564" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#b89564" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="arcology" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3fe0a0"/>
+      <stop offset="0.5" stop-color="#1f9e6c"/>
+      <stop offset="1" stop-color="#0d5e40"/>
+    </linearGradient>
+    <linearGradient id="goldBand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe89a"/>
+      <stop offset="1" stop-color="#e0a93f"/>
+    </linearGradient>
+    <linearGradient id="ruinTower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9c8157"/>
+      <stop offset="1" stop-color="#5e4d33"/>
+    </linearGradient>
+    <linearGradient id="ruinTower2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#857049"/>
+      <stop offset="1" stop-color="#4a3d28"/>
+    </linearGradient>
+    <linearGradient id="dust" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9a874" stop-opacity="0"/>
+      <stop offset="1" stop-color="#c9a874" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="riverGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fa8ff" stop-opacity="0.1"/>
+      <stop offset="0.5" stop-color="#8fd0ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#cdeaff" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.6" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="600" height="675" fill="url(#skyThrive)"/>
+  <rect x="600" y="0" width="600" height="675" fill="url(#skyDecline)"/>
+
+  <circle cx="170" cy="150" r="200" fill="url(#sunThrive)"/>
+  <circle cx="990" cy="170" r="180" fill="url(#sunDecline)"/>
+  <circle cx="170" cy="150" r="46" fill="#fff6d0"/>
+  <circle cx="990" cy="175" r="40" fill="#cbb088" opacity="0.85"/>
+
+  <ellipse cx="320" cy="110" rx="160" ry="20" fill="#bff0d0" opacity="0.18"/>
+  <ellipse cx="120" cy="230" rx="140" ry="16" fill="#9ee8c0" opacity="0.14"/>
+  <ellipse cx="820" cy="120" rx="170" ry="22" fill="#d8c39a" opacity="0.25"/>
+  <ellipse cx="1080" cy="240" rx="150" ry="18" fill="#c0a474" opacity="0.3"/>
+
+  <g opacity="0.55">
+    <rect x="30" y="300" width="34" height="180" fill="#15795180"/>
+    <rect x="78" y="260" width="40" height="220" fill="#1a8a5b80"/>
+    <rect x="132" y="320" width="30" height="160" fill="#14704a80"/>
+    <rect x="300" y="280" width="36" height="200" fill="#1a8a5b70"/>
+    <rect x="350" y="330" width="28" height="150" fill="#13684580"/>
+    <rect x="470" y="300" width="34" height="180" fill="#17805280"/>
+  </g>
+
+  <path d="M0 470 Q150 430 300 460 T600 455 L600 675 L0 675 Z" fill="#0e6644"/>
+  <path d="M0 520 Q160 490 320 510 T600 505 L600 675 L0 675 Z" fill="#0a4d33"/>
+  <path d="M0 580 Q180 560 360 575 T600 568 L600 675 L0 675 Z" fill="#073a26"/>
+
+  <g>
+    <polygon points="430,640 430,150 500,90 570,150 570,640" fill="url(#arcology)"/>
+    <polygon points="430,150 500,90 500,640 430,640" fill="#0e6e4a" opacity="0.6"/>
+    <rect x="496" y="90" width="8" height="550" fill="url(#goldBand)"/>
+    <g>
+      <rect x="430" y="210" width="140" height="6" fill="url(#goldBand)"/>
+      <rect x="430" y="280" width="140" height="6" fill="url(#goldBand)"/>
+      <rect x="430" y="350" width="140" height="6" fill="url(#goldBand)"/>
+      <rect x="430" y="420" width="140" height="6" fill="url(#goldBand)"/>
+      <rect x="430" y="490" width="140" height="6" fill="url(#goldBand)"/>
+      <rect x="430" y="560" width="140" height="6" fill="url(#goldBand)"/>
+    </g>
+    <g fill="#46d98a" opacity="0.85">
+      <ellipse cx="445" cy="222" rx="14" ry="8"/>
+      <ellipse cx="478" cy="222" rx="14" ry="8"/>
+      <ellipse cx="522" cy="222" rx="14" ry="8"/>
+      <ellipse cx="555" cy="222" rx="14" ry="8"/>
+      <ellipse cx="445" cy="362" rx="14" ry="8"/>
+      <ellipse cx="478" cy="362" rx="14" ry="8"/>
+      <ellipse cx="522" cy="362" rx="14" ry="8"/>
+      <ellipse cx="555" cy="362" rx="14" ry="8"/>
+      <ellipse cx="445" cy="502" rx="14" ry="8"/>
+      <ellipse cx="555" cy="502" rx="14" ry="8"/>
+    </g>
+    <g fill="#fff3b0">
+      <rect x="440" y="250" width="9" height="14"/><rect x="456" y="250" width="9" height="14"/><rect x="540" y="250" width="9" height="14"/><rect x="554" y="250" width="9" height="14"/>
+      <rect x="440" y="318" width="9" height="14"/><rect x="472" y="318" width="9" height="14"/><rect x="540" y="318" width="9" height="14"/>
+      <rect x="456" y="388" width="9" height="14"/><rect x="540" y="388" width="9" height="14"/><rect x="554" y="388" width="9" height="14"/>
+      <rect x="440" y="458" width="9" height="14"/><rect x="472" y="458" width="9" height="14"/><rect x="540" y="458" width="9" height="14"/>
+      <rect x="456" y="528" width="9" height="14"/><rect x="540" y="528" width="9" height="14"/><rect x="554" y="528" width="9" height="14"/>
+    </g>
+    <circle cx="500" cy="90" r="10" fill="#fff6d0"/>
+    <circle cx="500" cy="90" r="22" fill="#ffe08a" opacity="0.4"/>
+  </g>
+
+  <g>
+    <rect x="120" y="330" width="70" height="200" fill="url(#arcology)"/>
+    <rect x="120" y="330" width="70" height="8" fill="url(#goldBand)"/>
+    <g fill="#fff3b0">
+      <rect x="130" y="350" width="8" height="12"/><rect x="148" y="350" width="8" height="12"/><rect x="172" y="350" width="8" height="12"/>
+      <rect x="130" y="400" width="8" height="12"/><rect x="148" y="400" width="8" height="12"/><rect x="172" y="400" width="8" height="12"/>
+      <rect x="148" y="450" width="8" height="12"/><rect x="172" y="450" width="8" height="12"/>
+    </g>
+    <ellipse cx="155" cy="326" rx="40" ry="14" fill="#46d98a" opacity="0.8"/>
+  </g>
+
+  <polygon points="586,0 614,0 626,675 574,675" fill="url(#seamBand)"/>
+  <polygon points="592,300 608,300 622,675 578,675" fill="url(#riverGlow)"/>
+  <g fill="#dff0ff" opacity="0.7">
+    <ellipse cx="600" cy="560" rx="20" ry="4"/>
+    <ellipse cx="600" cy="610" rx="26" ry="5"/>
+    <ellipse cx="600" cy="650" rx="32" ry="6"/>
+  </g>
+  <g fill="#9fd4ff">
+    <circle cx="595" cy="200" r="2"/><circle cx="606" cy="260" r="1.5"/><circle cx="598" cy="340" r="2"/>
+    <circle cx="608" cy="420" r="1.5"/><circle cx="593" cy="470" r="2"/><circle cx="605" cy="520" r="1.5"/>
+  </g>
+
+  <path d="M600 480 Q780 460 960 478 T1200 470 L1200 675 L600 675 Z" fill="#6b573820"/>
+  <rect x="600" y="500" width="600" height="175" fill="#4a3c26"/>
+  <rect x="600" y="560" width="600" height="115" fill="#3a2f1e"/>
+
+  <g fill="#6e5a3a" opacity="0.6">
+    <rect x="640" y="320" width="34" height="160"/>
+    <polygon points="700,480 700,300 724,300 724,360 718,360 718,480"/>
+    <rect x="760" y="350" width="30" height="130"/>
+    <polygon points="1120,480 1120,310 1150,310 1150,480"/>
+  </g>
+
+  <g>
+    <polygon points="820,500 820,220 880,220 880,260 868,260 868,240 856,260 880,290 880,500" fill="url(#ruinTower)"/>
+    <g fill="#241c10">
+      <rect x="828" y="290" width="10" height="16"/><rect x="846" y="290" width="10" height="16"/><rect x="864" y="290" width="10" height="16"/>
+      <rect x="828" y="330" width="10" height="16"/><rect x="864" y="330" width="10" height="16"/>
+      <rect x="828" y="370" width="10" height="16"/><rect x="846" y="370" width="10" height="16"/>
+      <rect x="846" y="410" width="10" height="16"/><rect x="864" y="410" width="10" height="16"/>
+      <rect x="828" y="450" width="10" height="16"/><rect x="864" y="450" width="10" height="16"/>
+    </g>
+    <polyline points="850,260 844,320 854,380 846,460" fill="none" stroke="#2a2114" stroke-width="3"/>
+    <rect x="846" y="330" width="10" height="16" fill="#a8743a" opacity="0.6"/>
+  </g>
+
+  <g>
+    <polygon points="930,500 930,280 940,270 980,270 980,500" fill="url(#ruinTower2)"/>
+    <g fill="#201a0f">
+      <rect x="938" y="300" width="9" height="14"/><rect x="954" y="300" width="9" height="14"/><rect x="968" y="300" width="9" height="14"/>
+      <rect x="938" y="340" width="9" height="14"/><rect x="968" y="340" width="9" height="14"/>
+      <rect x="938" y="380" width="9" height="14"/><rect x="954" y="380" width="9" height="14"/><rect x="968" y="380" width="9" height="14"/>
+      <rect x="954" y="420" width="9" height="14"/><rect x="968" y="420" width="9" height="14"/>
+      <rect x="938" y="460" width="9" height="14"/><rect x="954" y="460" width="9" height="14"/>
+    </g>
+    <polygon points="930,270 980,270 975,258 936,258" fill="#3a2f1e"/>
+  </g>
+
+  <g>
+    <polygon points="1040,500 1050,360 1064,360 1072,440 1090,400 1098,500" fill="url(#ruinTower)"/>
+    <g fill="#221a0e">
+      <rect x="1052" y="390" width="8" height="12"/><rect x="1052" y="420" width="8" height="12"/><rect x="1080" y="430" width="8" height="12"/>
+    </g>
+  </g>
+
+  <g fill="#3f3320">
+    <polygon points="640,540 680,512 720,540"/>
+    <polygon points="760,548 800,520 840,548"/>
+    <polygon points="1010,545 1055,515 1100,545"/>
+    <polygon points="1130,548 1165,524 1198,548"/>
+  </g>
+  <g fill="#56462c">
+    <rect x="700" y="540" width="30" height="14"/>
+    <rect x="880" y="548" width="40" height="16"/>
+    <rect x="1000" y="544" width="26" height="12"/>
+  </g>
+
+  <rect x="600" y="380" width="600" height="295" fill="url(#dust)"/>
+  <g fill="#cbab78" opacity="0.4">
+    <ellipse cx="860" cy="470" rx="120" ry="34"/>
+    <ellipse cx="1080" cy="500" rx="130" ry="40"/>
+    <ellipse cx="700" cy="500" rx="90" ry="28"/>
+  </g>
+  <g fill="#e6cda0">
+    <circle cx="720" cy="350" r="2" opacity="0.5"/><circle cx="900" cy="320" r="1.6" opacity="0.4"/>
+    <circle cx="1050" cy="360" r="2.2" opacity="0.5"/><circle cx="820" cy="420" r="1.8" opacity="0.4"/>
+    <circle cx="980" cy="440" r="2" opacity="0.45"/><circle cx="1140" cy="400" r="1.6" opacity="0.4"/>
+  </g>
+
+  <g fill="#9ff0c4" opacity="0.7">
+    <ellipse cx="260" cy="180" rx="20" ry="5"/>
+    <ellipse cx="380" cy="240" rx="16" ry="4"/>
+    <ellipse cx="100" cy="300" rx="14" ry="4"/>
+  </g>
+  <g fill="#fff3b0">
+    <circle cx="270" cy="180" r="2"/><circle cx="388" cy="240" r="2"/><circle cx="110" cy="300" r="2"/>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="675" fill="url(#vignette)"/>
+</svg>

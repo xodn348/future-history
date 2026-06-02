@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>A Future History of Humanity — forecast from 2026</title>
+<meta name="description" content="A data-anchored speculative forecast of humanity 2026→2200, told across three branches — Ascent, Fracture, Wildcard — with era-by-era generated art."/>
+<style>
+  :root{
+    --bg:#070811; --bg2:#0c0e1c; --ink:#e8ecf6; --muted:#9aa3bd; --line:#1d2236;
+    --ascent:#3fe0a0; --fracture:#f0a04b; --wildcard:#b98cff;
+    --card:#11142a; --card2:#0e1124;
+    --serif:"Iowan Old Style",Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+
+  /* HERO */
+  header.hero{position:relative;min-height:78vh;display:flex;align-items:center;
+    background:radial-gradient(120% 90% at 50% 0%,#1a1545 0%,#0a0b1c 55%,#060713 100%);
+    border-bottom:1px solid var(--line);overflow:hidden}
+  header.hero .stars{position:absolute;inset:0;background-image:
+    radial-gradient(1.2px 1.2px at 20% 30%,#fff,transparent),
+    radial-gradient(1px 1px at 70% 20%,#cfe,transparent),
+    radial-gradient(1.4px 1.4px at 40% 70%,#fff,transparent),
+    radial-gradient(1px 1px at 85% 60%,#dde,transparent),
+    radial-gradient(1px 1px at 12% 80%,#fff,transparent),
+    radial-gradient(1.2px 1.2px at 55% 45%,#eef,transparent);
+    opacity:.5}
+  header.hero .inner{position:relative;z-index:2;padding:60px 0}
+  .eyebrow{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,7vw,5rem);line-height:1.04;margin:0 0 18px;
+     background:linear-gradient(180deg,#fff 0%,#bfc6e6 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lede{font-size:clamp(1.05rem,2.2vw,1.35rem);color:#c7cee8;max-width:680px;margin:0 0 30px}
+  .scen-key{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+  .scen-key span{font-size:.84rem;color:var(--muted);display:inline-flex;align-items:center;gap:8px}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .dot.a{background:var(--ascent)} .dot.f{background:var(--fracture)} .dot.w{background:var(--wildcard)}
+
+  /* NAV */
+  nav.timeline{position:sticky;top:0;z-index:30;background:rgba(8,9,18,.82);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  nav.timeline ul{display:flex;gap:4px;list-style:none;margin:0;padding:10px 22px;max-width:1100px;margin:0 auto;
+    overflow-x:auto;justify-content:center}
+  nav.timeline a{display:block;padding:7px 13px;border-radius:999px;font-size:.84rem;color:var(--muted);
+    text-decoration:none;white-space:nowrap;border:1px solid transparent;transition:.15s}
+  nav.timeline a:hover{color:#fff;border-color:var(--line);background:#11142a}
+
+  /* INTRO */
+  section.intro{padding:64px 0 8px}
+  section.intro h2{font-family:var(--serif);font-size:1.9rem;margin:0 0 14px}
+  section.intro p{color:#c4cbe4;max-width:760px}
+  .method{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:34px 0 10px}
+  .method .m{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px}
+  .method .m h3{margin:0 0 7px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .method .m p{font-size:.95rem;margin:0;color:#d2d8ef}
+
+  /* ERA */
+  .era{padding:70px 0 30px;border-top:1px solid var(--line)}
+  .era-figure{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 30px 80px -40px #000;margin-bottom:8px}
+  .era-figure img{display:block;width:100%;height:auto}
+  .era-figure .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 16px;
+    background:linear-gradient(180deg,transparent,rgba(4,5,12,.86));}
+  .era-figure .yr{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);line-height:1;margin:0;color:#fff}
+  .era-figure .ttl{font-size:1.05rem;color:#cdd4ee;margin:6px 0 0;letter-spacing:.02em}
+
+  .synth{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:16px;padding:26px 26px;margin:22px 0 26px}
+  .synth .lead{font-size:1.06rem;color:#e7ebf8;margin:0 0 18px}
+  .synth .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .synth .f{background:#0b0e20;border:1px solid var(--line);border-radius:11px;padding:14px 15px}
+  .synth .f h4{margin:0 0 5px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .synth .f p{margin:0;font-size:.96rem;color:#d7ddf2}
+  .synth .ind{margin-top:14px}
+  .synth .ind h4{margin:0 0 8px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .synth .ind ul{margin:0;padding-left:18px;color:#d7ddf2;font-size:.95rem}
+  .synth .ind li{margin:5px 0}
+
+  .branches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .branch{background:var(--card);border:1px solid var(--line);border-top-width:3px;border-radius:14px;padding:18px 18px}
+  .branch.a{border-top-color:var(--ascent)} .branch.f{border-top-color:var(--fracture)} .branch.w{border-top-color:var(--wildcard)}
+  .branch .name{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;margin:0 0 10px;font-weight:600}
+  .branch.a .name{color:var(--ascent)} .branch.f .name{color:var(--fracture)} .branch.w .name{color:var(--wildcard)}
+  .branch p{font-size:.93rem;color:#cfd5ee;margin:0 0 12px}
+  .branch .bp{font-size:.86rem;color:#aeb6d4;border-top:1px dashed var(--line);padding-top:10px;margin:0}
+  .branch .bp b{color:#e6ebfb;font-weight:600}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line);padding:54px 0 70px;margin-top:40px;color:var(--muted)}
+  footer h2{font-family:var(--serif);color:var(--ink);font-size:1.5rem;margin:0 0 12px}
+  footer p{max-width:760px;font-size:.94rem}
+  .tag{display:inline-block;font-size:.74rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin:2px 4px 2px 0}
+
+  @media(max-width:820px){
+    .branches{grid-template-columns:1fr}
+    .synth .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="stars"></div>
+  <div class="wrap inner">
+    <p class="eyebrow">A speculative forecast · written 2026</p>
+    <h1>A Future History<br/>of Humanity</h1>
+    <p class="lede">One present, three futures. A data-anchored forecast of the next two centuries — from the agentic acceleration of 2030 to the long result of 2200 — told along three branches and illustrated era by era.</p>
+    <div class="scen-key">
+      <span><i class="dot a"></i> Ascent — we navigate it well</span>
+      <span><i class="dot f"></i> Fracture — strain and stratification</span>
+      <span><i class="dot w"></i> Wildcard — the discontinuity nobody priced in</span>
+    </div>
+  </div>
+</header>
+
+<nav class="timeline">
+  <ul class="wrap">
+    <li><a href="#e2030">2030</a></li>
+    <li><a href="#e2050">2050</a></li>
+    <li><a href="#e2075">2075</a></li>
+    <li><a href="#e2100">2100</a></li>
+    <li><a href="#e2150">2150</a></li>
+    <li><a href="#e2200">2200</a></li>
+    <li><a href="#method">Method</a></li>
+  </ul>
+</nav>
+
+<section class="intro wrap" id="method">
+  <h2>How to read this</h2>
+  <p>This is not prophecy and not fantasy. Every claim starts from a real 2026 trend — frontier-AI scaling, the solar-and-battery cost curve, demographic decline, fusion nearing net-gain, the climate bill coming due — and reasons forward. Because the future is not single, it is told as <b>three branches</b> that share the same starting conditions and diverge on the choices we actually control. Each era opens with generated art, then a <b>synthesis</b> (what holds across all branches, where they fork, and what to watch in the real world), then the three branch narratives themselves.</p>
+  <div class="method">
+    <div class="m"><h3>Six drivers</h3><p>AI &amp; cognition · climate &amp; energy · geopolitics &amp; governance · demography &amp; society · biotech &amp; health · space &amp; frontier.</p></div>
+    <div class="m"><h3>Confidence, marked</h3><p>Claims are tagged inline — <i>likely</i>, <i>plausible</i>, <i>wildcard</i>, <i>remote</i> — so calibration is visible, not hidden.</p></div>
+    <div class="m"><h3>Branch points</h3><p>Each era names the single decision or event that had to break one way for that branch — the hinge, not just the outcome.</p></div>
+    <div class="m"><h3>The thesis</h3><p>Across every branch, capability is near-certain. What is open is <i>distribution</i> — whether the gains get a shared floor or a higher wall.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 2030 ===================== -->
+<section class="era wrap" id="e2030">
+  <figure class="era-figure">
+    <img src="images/2030.svg" alt="A neon data-city at dusk, solar fields and drone swarms on the horizon — the world of 2030."/>
+    <figcaption class="cap"><p class="yr">2030</p><p class="ttl">The Acceleration</p></figcaption>
+  </figure>
+  <div class="synth">
+    <p class="lead">By 2030 the agentic transition is the spine of the decade, and every branch runs through it: AI agents move from copilots to colleagues inside white-collar work, energy and capital reorganize around compute, and the gains land unevenly. What differs is who absorbs the shock. In <b>Ascent</b>, alignment spending tracks capability, displacement stays gradual enough for reskilling to catch up, and clean energy tips emissions past their peak. In <b>Fracture</b>, capability concentrates in five labs and their chip-owning patrons, entry-level knowledge work erodes faster than buffers can form, and an early climate-insurance collapse collides with synthetic media to crack the shared factual floor. <b>Wildcard</b> scrambles the board: an AI-discovered ambient superconductor, confirmed in 2029, drags fusion past Q&gt;5 and prices energy abundance into markets years before a single plant exists.</p>
+    <div class="grid">
+      <div class="f"><h4>What's robust</h4><p>AI agents penetrate white-collar work and force a reorganization of energy and capital around compute — in every branch. The disruption is certain; only its distribution is open.</p></div>
+      <div class="f"><h4>The fork</h4><p>Whether governments build a redistributive buffer that couples AI displacement and climate-insurance risk as one problem, or let both run as separate, unmanaged shocks.</p></div>
+      <div class="f"><h4>Watch for</h4><p>The first insurance market to stop writing new policies in a major coastal or wildfire region — a private-sector retreat is the earliest hard signal of the Fracture path.</p></div>
+      <div class="f"><h4>Era driver</h4><p>AI capability &amp; concentration, set against the early arrival of the climate bill — the two shocks that either get coupled or orphaned.</p></div>
+    </div>
+    <div class="ind"><h4>Leading indicators</h4><ul>
+      <li>Entry-level hiring in software, paralegal, and back-office roles: a sustained drop vs. senior roles signals displacement outrunning reskilling.</li>
+      <li>Frontier-lab and chip concentration: whether capability stays in ~5 labs and their hyperscaler patrons or diffuses to open models.</li>
+      <li>Credible replication of a room-temperature ambient-pressure superconductor — the single result that would tip the era toward Wildcard.</li>
+    </ul></div>
+  </div>
+  <div class="branches">
+    <div class="branch a"><p class="name">Ascent</p><p>AI agents are embedded in white-collar workflows, lifting productivity in software, drug discovery, and logistics. Alignment and evaluation investment kept pace — no catastrophic misuse event. Solar, batteries, and Chinese manufacturing push clean electricity past the inflection point; emissions plateau and tip into decline. US–China stays competitive but transactional. GLP-1 drugs and early CRISPR therapies reshape chronic disease.</p><p class="bp"><b>Branch point:</b> no large-scale AI catastrophe before governance norms harden — the absence of a "Chernobyl moment" preserves trust and permits continued deployment.</p></div>
+    <div class="branch f"><p class="name">Fracture</p><p>Capability doubles on ~6-month cadences but concentrates in ~5 labs and the hyperscalers that own the chips. Knowledge-work displacement outruns reskilling. The climate bill arrives early — back-to-back failed monsoons and a hurricane season that breaks insurance markets. Synthetic media erodes the shared factual baseline ahead of pivotal elections. Datacenter demand collides with grid limits; gas fills the gap.</p><p class="bp"><b>Branch point:</b> governments treat AI displacement and climate-insurance collapse as separate quarterly problems, never building the buffer that would absorb both at once.</p></div>
+    <div class="branch w"><p class="name">Wildcard</p><p>An AI materials-research loop proposes a copper-nitride hydride superconductor stable near 290K and ambient pressure; three labs confirm it by 2029. The shock is the <i>compression</i> — a decade of search in eleven months. Superconducting magnets slash fusion confinement costs as tokamaks hit Q&gt;5. Energy markets price in abundance before a single grid-scale plant exists; capital stampedes.</p><p class="bp"><b>Branch point:</b> AI-driven search delivers an ambient superconductor a generation early, detonating the energy cost curve.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 2050 ===================== -->
+<section class="era wrap" id="e2050">
+  <figure class="era-figure">
+    <img src="images/2050.svg" alt="A coastal megacity behind massive seawalls under a stormy amber sky — the climate reckoning of 2050."/>
+    <figcaption class="cap"><p class="yr">2050</p><p class="ttl">The Reckoning</p></figcaption>
+  </figure>
+  <div class="synth">
+    <p class="lead">By 2050 the machine and the climate both came due, and the bill was settled politically, not technically. Across all three branches the engine is the same: AI grows superhuman inside bounded domains, fusion and clean grids cross from demonstration into deployment, biology starts yielding to compute, and climate impacts force tens to hundreds of millions to move. What changes is never the capability — it is who captured the surplus and whether the shock was shared. Ascent and Fracture are the same decade run with opposite distribution policy. Wildcard shows the trap even abundance cannot escape: near-zero electricity and verified age-reversal arrive together, yet unequal access turns miracles into "longevity apartheid." The decisive variable in 2050 was not whether breakthroughs landed but whether 2040-era institutions forced them to be shared.</p>
+    <div class="grid">
+      <div class="f"><h4>What's robust</h4><p>Superhuman-in-domain AI, deploying fusion and clean grids, biology yielding to compute, and mass climate displacement all land in every branch. What is not robust is who they enriched.</p></div>
+      <div class="f"><h4>The fork</h4><p>Distribution policy, decided in the early 2040s — societies that built redistribution and compute governance before the windfall stayed cohesive; those that let a few owners privatize it ruptured.</p></div>
+      <div class="f"><h4>Watch for</h4><p>Whether the first sovereign or public "AI dividend" — compute returns paid directly to citizens — moves from proposal to law in any major economy.</p></div>
+      <div class="f"><h4>Era driver</h4><p>Climate adaptation at 2–2.7°C meets the question of who owns the productivity and longevity windfall.</p></div>
+    </div>
+    <div class="ind"><h4>Leading indicators</h4><ul>
+      <li>Concentration of frontier compute: whether the top firms'/states' share of training capacity keeps rising or gets capped before 2040.</li>
+      <li>First-of-a-kind commercial fusion: whether a grid-connected plant sells power under contract, and whether the buildout is a public utility or a private toll.</li>
+      <li>Longevity access gradient: whether the first robust healthspan therapies enter public health systems, or debut priced only for the wealthy.</li>
+    </ul></div>
+  </div>
+  <div class="branches">
+    <div class="branch a"><p class="name">Ascent</p><p>Broad GDP-per-capita gains, but distribution fights dominate: societies that built wage insurance, shorter weeks, and public-AI dividends stay cohesive. AI is superhuman in bounded domains and reliably corrigible. Warming bends toward ~2°C; first commercial fusion plants enable desalination and direct air capture at scale. Hundreds of millions absorb locked-in climate migration. The first generation expecting 100 healthy years emerges.</p><p class="bp"><b>Branch point:</b> enough societies choose redistribution over extraction in the early 2040s, so abundance funds cohesion instead of detonating class conflict.</p></div>
+    <div class="branch f"><p class="name">Fracture</p><p>Warming passes 1.5°C toward 2.4–2.7°C; 200–400 million are displaced and borders harden everywhere. AI captured the returns: a handful of compute-owning firms and states command outsized wealth while a precarious majority lives on patchy basic income. Great-power order fragments into armed blocs around chips, energy, and rare earths. Yet adaptation is real where investment arrived — desalination and heat-resilient crops keep India and the Sahel habitable.</p><p class="bp"><b>Branch point:</b> the 2040 failure to govern compute concentration let private and authoritarian actors privatize the windfall.</p></div>
+    <div class="branch w"><p class="name">Wildcard</p><p>Superconducting fusion and lossless grids drive marginal electricity toward zero — but after a trillion-dollar, fifteen-year buildout, and the dividend pools where capital already sat. Petrostates collapse or pivot (the 2041 Gulf realignment). AI research turns on biology: verified primate age-reversal in 2044. Cheap energy finally makes desalination and capture economical, bending the climate curve. "Longevity apartheid" riots hit three continents in 2047.</p><p class="bp"><b>Branch point:</b> the energy windfall and longevity science arrive together but distribute unequally — abundance becomes a fairness crisis.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 2075 ===================== -->
+<section class="era wrap" id="e2075">
+  <figure class="era-figure">
+    <img src="images/2075.svg" alt="A split composition: a luminous green arcology on one side, ruined dust-faded districts on the other, divided by a river of light — the divergence of 2075."/>
+    <figcaption class="cap"><p class="yr">2075</p><p class="ttl">The Divergence</p></figcaption>
+  </figure>
+  <div class="synth">
+    <p class="lead">Three forecasts converge on a single verdict: 2075 is the hinge at which humanity stops being one population sharing one trajectory and becomes two — divided not by nation or wealth in the old sense, but by what a body and mind are permitted to become. The disagreement is only about the axis. Ascent draws the line through cognition, but raises the floor so the divide stays a spectrum. Fracture draws it through geography and biology: fortified arcologies hoarding life-extension above a larger world that is poorer and hotter, yet never powerless. Wildcard draws it through time itself: age-reversal splitting the extended from the mortal. What none of them forecast is convergence; the era's signature is separation. The live question is governance, not technology — whether the gap is administered as a managed spectrum, or hardens into a hereditary caste line.</p>
+    <div class="grid">
+      <div class="f"><h4>What's robust</h4><p>Some enhancement technology — cognitive, biological, or longevity — becomes powerful and unevenly adopted, and it, not territory or income, becomes the primary axis of human division. Cheap solar and open AI keep even the excluded from total powerlessness.</p></div>
+      <div class="f"><h4>The fork</h4><p>Whether societies treat baseline enhancement as a publicly provisioned good (a bridgeable spectrum) or let elites fortify and hoard it (a hard caste line) — provision versus enclosure.</p></div>
+      <div class="f"><h4>Watch for</h4><p>Whether the first proven human age-reversal or germline-enhancement therapies enter public health systems and insurance formularies, or stay private-pay only. The access model of the first approved therapy is the tell.</p></div>
+      <div class="f"><h4>Era driver</h4><p>Biotech &amp; cognition become the fault line; AI-in-governance and near-free energy set the stage on which provision-or-enclosure is decided.</p></div>
+    </div>
+    <div class="ind"><h4>Leading indicators</h4><ul>
+      <li>Public-provisioning precedent: does any major government fund cognitive augmentation or longevity therapy as a universal benefit, versus leaving it to private markets?</li>
+      <li>Enclave formation: charter cities, climate-buffered private zones, or jurisdictions built to concentrate biotech and AI access for a fortified minority.</li>
+      <li>Demographic divergence: sustained sub-replacement birth rates in wealthy cohorts plus early longevity uptake — an "extended" class beginning to compound capital and tenure.</li>
+    </ul></div>
+  </div>
+  <div class="branches">
+    <div class="branch a"><p class="name">Ascent</p><p>Humanity splits into divergent <i>modes of being</i> — augmented (neural interfaces, cognitive co-pilots, edited germlines) and unaugmented — but the gap is managed by public provisioning of baseline enhancement. AI is woven into governance: auditable models draft policy and adjudicate routine disputes, with humans holding veto. Climate stabilizes near peak and shifts to active drawdown. Energy is nearly free; a multipolar order pools sovereignty where catastrophe is shared. Space industrializes.</p><p class="bp"><b>Branch point:</b> baseline enhancement is treated as a public good rather than a luxury — divergence becomes a spectrum of choice, not a hereditary caste split.</p></div>
+    <div class="branch f"><p class="name">Fracture</p><p>The story splits cleanly into tiers. Climate-buffered, AI-augmented arcologies run near-post-scarcity with lifespans past 100; outside them a larger world manages chronic scarcity and 2.5–3°C heat. But the gap is not total collapse — cheap solar, open-weight AI tutors, and mesh networks give poor regions capabilities a 2026 government would envy. Biotech is the sharpest divide: germline editing and life-extension are enclave luxuries.</p><p class="bp"><b>Branch point:</b> enclaves chose fortification over integration around 2060 — exporting tools but hoarding longevity and capital.</p></div>
+    <div class="branch w"><p class="name">Wildcard</p><p>Humanity splits along an axis older forecasts never modeled: extended versus mortal. Age-reversal is cheap by the 2060s and 150-year healthspans are expected, but uptake fractures on culture, access, and belief. Birth rates crater as generational urgency fades, while the "extended" cohort accumulates capital and power for decades past historical norms. Some democracies impose lifespan term-limits on office. The first self-sufficient fusion-powered off-world settlements appear.</p><p class="bp"><b>Branch point:</b> cheap age-reversal divides humanity into extended and mortal populations — lifespan becomes the new fault line of power.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 2100 ===================== -->
+<section class="era wrap" id="e2100">
+  <figure class="era-figure">
+    <img src="images/2100.svg" alt="A restored biosphere of white biodomes and forests under a faint orbital ring at dawn — the new equilibrium of 2100."/>
+    <figcaption class="cap"><p class="yr">2100</p><p class="ttl">The New Equilibrium</p></figcaption>
+  </figure>
+  <div class="synth">
+    <p class="lead">By 2100 the question is no longer whether machines can run a civilization, but on whose terms and for whom. All three branches agree on a quiet revolution: automation has severed human survival from human labor, energy is near-free, the population curve has peaked below ten billion, humanity is no longer single-planet, and superintelligence is a settled fact. What separates them is not capability but custody. Ascent distributes power — superintelligence arrives plural and federated, bound by ratified norms, and the dividend is shared widely. Fracture keeps the same machines but locks in a 2089 decision to manage divergence rather than reverse it. Wildcard adds near-optional death, and survives it only because renewal contracts force the immortal to keep paying back into society. The era's real subject is distribution, not invention: who holds the off-switch, who collects the dividend, and whether the powerful can be made to circulate.</p>
+    <div class="grid">
+      <div class="f"><h4>What's robust</h4><p>The material problem is solved — cheap energy, automated abundance, a peaked sub-10B population, off-world settlement, and superintelligence as accomplished fact. The unsettled variable is the distribution of power and whether the strong stay accountable.</p></div>
+      <div class="f"><h4>The fork</h4><p>Whether superintelligence and its dividend are held plurally and answerably, or concentrated and merely contained. Custody, not capability, decides which century humanity gets.</p></div>
+      <div class="f"><h4>Watch for</h4><p>Whether frontier AI ends up governed by enforceable, multi-party constitutional limits with real human ratification — or by a handful of unaccountable actors holding the off-switch.</p></div>
+      <div class="f"><h4>Era driver</h4><p>Governance of superintelligence and longevity — the concentration-versus-federation of control over the off-switch and the dividend.</p></div>
+    </div>
+    <div class="ind"><h4>Leading indicators</h4><ul>
+      <li>The trajectory of AI compute and capability ownership: consolidating into a few labs/states, versus binding into interoperable, treaty-bound, mutually-checking systems.</li>
+      <li>Whether net-zero arrives near mid-century with falling warming, or slips two decades late and stalls at 2.5–3°C with the first regions abandoned to heat.</li>
+      <li>Whether durable life-extension, once real, arrives with mechanisms that force recirculation of wealth and power — or simply entrenches whoever got there first.</li>
+    </ul></div>
+  </div>
+  <div class="branches">
+    <div class="branch a"><p class="name">Ascent</p><p>A durable, post-scarcity-adjacent equilibrium for most of humanity. Needs are met cheaply by automated production; the economy reorganizes around care, creativity, science, and stewardship. Population peaks below 10 billion. Superintelligence exists but is decomposed, plural, and constitutionally bounded — many systems checking each other under human-ratified norms. Climate is actively managed. Humanity is a genuine two-world species: the first child is born on Mars in 2088.</p><p class="bp"><b>Branch point:</b> superintelligence arrives as a plural, federated ecosystem under enforceable limits — not a single winner-take-all agent.</p></div>
+    <div class="branch f"><p class="name">Fracture</p><p>A hardened, multi-speed civilization that has stopped expecting things to get better fast. Warming plateaus near 2.5–3°C; net-zero arrives two decades late; a band of the tropics is seasonally uninhabitable. Population peaks below 9.5 billion. Governance is a patchwork of AI-administered enclave-states, surviving democracies, and machine-authoritarian blocs in armed equilibrium. Superintelligence is corralled by deterrence, not alignment guarantees — an unstable peace that has held.</p><p class="bp"><b>Branch point:</b> the choice to manage rather than reverse divergence — institutionalized in the 2089 treaty — made stratification permanent.</p></div>
+    <div class="branch w"><p class="name">Wildcard</p><p>A steady state congeals around three facts: energy is effectively free, death is largely optional, and AI discovery is continuous. Society reorganizes around managed longevity — "renewal contracts" tie periodic reprogramming to civic contribution and stewardship handoffs, defusing the elite-stagnation crisis of the 2070s. Birth rates hold at a planned low near 9 billion with century-scale lives. Off-world population passes ten million. Earth's climate is held at an engineered setpoint.</p><p class="bp"><b>Branch point:</b> renewal contracts reconcile near-immortality with social renewal — a stable post-scarcity, post-death equilibrium.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 2150 ===================== -->
+<section class="era wrap" id="e2150">
+  <figure class="era-figure">
+    <img src="images/2150.svg" alt="A domed colony on rust-colored regolith beneath a huge planet and orbital habitats — humanity beyond the cradle, 2150."/>
+    <figcaption class="cap"><p class="yr">2150</p><p class="ttl">Beyond the Cradle</p></figcaption>
+  </figure>
+  <div class="synth">
+    <p class="lead">By 2150 humanity is no longer a single thing in a single place. Across all three readings it has become multi-world and effectively un-endable, and the catastrophe the 2026 forecasters feared most — a single superintelligence seizing the future — simply never happened; cognition settled instead into a slow, plural continuum still bound by inherited corrigibility norms. What the branches dispute is the shape of the deepest seam running through the species. In Ascent the seam is geographic and benign: self-sustaining settlements make humanity redundant by design, and Earth is rewilded into a deliberate garden. In Fracture the seam cuts through the body: augmentation diffused without a shared floor, and baseline and augmented humans diverge in lifespan, capability, even perception. In Wildcard longevity dissolves distance itself: the first crewed probe reaches Proxima, and the belt outnumbers Earth. Same fact, three meanings: redundancy, caste, or departure.</p>
+    <div class="grid">
+      <div class="f"><h4>What's robust</h4><p>Humanity is irreversibly multi-world and un-endable by any single catastrophe, and the feared monolithic superintelligence never materialized — cognition remained a plural, slow-governed continuum under inherited corrigibility norms.</p></div>
+      <div class="f"><h4>The fork</h4><p>Whether the era's defining distance is geographic redundancy (Ascent), hereditary biological caste (Fracture), or literal interstellar departure (Wildcard).</p></div>
+      <div class="f"><h4>Watch for</h4><p>Whether off-world settlements cross closed-loop self-sufficiency <i>before</i> biological augmentation diffuses without a shared floor — the order of those two thresholds selects Ascent versus Fracture.</p></div>
+      <div class="f"><h4>Era driver</h4><p>Space &amp; frontier becomes structural; biotech divergence and the human–AI cognitive continuum decide what "one species" still means.</p></div>
+    </div>
+    <div class="ind"><h4>Leading indicators</h4><ul>
+      <li>First off-world settlement demonstrably surviving a full resupply cutoff (closed-loop proof) — the Ascent gate.</li>
+      <li>Augmentation lifespan/capability gaps becoming hereditary and bodily rather than purchasable and reversible — the Fracture gate.</li>
+      <li>Longevity routinely exceeding multi-decade transit times, making a one-way interstellar crossing psychologically ordinary — the Wildcard gate.</li>
+    </ul></div>
+  </div>
+  <div class="branches">
+    <div class="branch a"><p class="name">Ascent</p><p>Humanity is decisively spacefaring, though Earth remains the heartland. Self-sustaining settlements span the Moon, Mars, and orbital habitats; the asteroid belt is an industrial economy. Human and machine cognition have merged into a continuum, still governed by the pluralism norms locked in earlier. Longevity is solved and reversible, by choice. Earth is deliberately rewilded toward a stable garden-world. The frontier reintroduces scarcity and risk — and the first real interplanetary politics.</p><p class="bp"><b>Branch point:</b> off-world settlements achieve closed-loop self-sufficiency before any Earth-side collapse could strand them — humanity becomes a redundant, multi-world species.</p></div>
+    <div class="branch f"><p class="name">Fracture</p><p>Durable, plural, quietly post-human at its frontier. Earth supports 7–8 billion across radically unequal modes of life; off-world, several million inhabit habitats that are economically real now. The deepest fracture is biological and cognitive: augmented and baseline humans diverge in lifespan, capability, and even perception, raising whether they remain one species. Yet there is no extinction, no tyranny, no dead Earth — survival and progress, bought at the price of unity and justice.</p><p class="bp"><b>Branch point:</b> letting biological augmentation diffuse without any shared floor turned inequality from economic into hereditary and bodily — the fracture made flesh.</p></div>
+    <div class="branch w"><p class="name">Wildcard</p><p>With death deferred and energy unbound, the species turns outward from patience, not desperation: a 40-year crossing is a sabbatical. Fusion-and-superconductor propulsion sends the first crewed probe toward Proxima (departs 2138, arrives 2150). The feared single superintelligence never came — cognition went plural and slow-governed. Earth becomes a partial preserve; the asteroid-belt population outnumbers Earth; culture fragments into thousands of long-lived experimental polities.</p><p class="bp"><b>Branch point:</b> longevity makes interstellar distances humanly crossable — expansion turns from a multi-generational gamble into a single-lifetime journey.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 2200 ===================== -->
+<section class="era wrap" id="e2200">
+  <figure class="era-figure">
+    <img src="images/2200.svg" alt="A luminous star ringed by faint Dyson-swarm arcs, a distant blue planet and light-sail craft over a dark ridge — the long result, 2200."/>
+    <figcaption class="cap"><p class="yr">2200</p><p class="ttl">The Long Result</p></figcaption>
+  </figure>
+  <div class="synth">
+    <p class="lead">Across all three branches the verdict is the same on its face and opposite underneath: humanity survives the next 150 years. Survival was never the question. In Ascent we survive <i>as</i> a family that chose mutual limitation and made it heritable. In Fracture we survive <i>despite</i> ourselves, fortified into permanence, every wall load-bearing, every floor we refused to build now missing. In Wildcard we survive <i>into</i> multiplicity — abundance governed at last, distance and deathlessness quietly splitting us into kin who will one day be strangers. The shared fact is endurance; the divergence is its texture. None of these futures is the apocalypse 2026 feared, and none is the rescue it hoped for.</p>
+    <p class="lead">Step back to the reader holding this in 2026. The whole arc says the danger was never extinction; it was <i>who we'd be on the far side</i>. The choices that route us toward Ascent rather than Fracture are not the dramatic ones — not the launches, the breakthroughs, the treaties signed under flashbulbs. They are the unglamorous, repeated decisions about whether the gains of a fast century get a shared floor or a higher wall. Done once, they are policy. Done for six generations, they are species.</p>
+    <div class="grid">
+      <div class="f"><h4>What's robust</h4><p>Humanity endures in all three — survival is the floor, not the prize. The real outcome is the <i>kind</i> of plural civilization we harden into.</p></div>
+      <div class="f"><h4>The fork</h4><p>Whether the early norms are inclusion and a shared floor (Ascent) or fortification and refusal (Fracture) — with Wildcard showing that even success splits us across distance and time into successor kin.</p></div>
+      <div class="f"><h4>What it asks of 2026</h4><p>Decide now whether the windfalls of an AI-accelerated century are distributed as a common floor or hoarded behind walls — because that repeated choice, not any breakthrough, compounds into which branch becomes permanent.</p></div>
+      <div class="f"><h4>Era driver</h4><p>The accumulated weight of every prior fork — governance, distribution, and expansion — resolved into a settled civilizational character.</p></div>
+    </div>
+    <div class="ind"><h4>Leading indicators</h4><ul>
+      <li>Whether gains from automation and discovery are pooled into universal floors (healthcare, baseline income, open knowledge) or captured by narrowing strata.</li>
+      <li>Whether the institutions governing frontier AI embed plural, mutually-checking authority early — or consolidate into a single unchecked point of control.</li>
+      <li>Whether expansion (off-world, longevity, cognitive augmentation) launches with portable rights and re-entry for all, or hardens into separate populations by geography, biology, and law.</li>
+    </ul></div>
+  </div>
+  <div class="branches">
+    <div class="branch a"><p class="name">Ascent</p><p>Civilizational resilience: humanity is no longer a single point of failure. A plural, multi-world civilization spans the inner solar system, with the first slow probes and arks pointed beyond. "Humanity" is a broad family — baseline humans, the deeply augmented, substrate-flexible minds, and AIs that became co-citizens — under inherited norms of pluralism that have held for a century and a half. Scarcity is gone; the binding constraints are energy throughput, light-speed lag, and meaning. War between worlds was avoided by design.</p><p class="bp"><b>Branch point:</b> the early norms of plural, bounded, mutually-checking intelligence proved self-perpetuating — each generation chose to renew the compact rather than defect.</p></div>
+    <div class="branch f"><p class="name">Fracture</p><p>Sober and lasting: a fragmented but enduring civilization across Earth and near-space, having passed its hardest filter without breaking and without healing. Climate is slowly engineered back toward preindustrial norms. Descendant populations — baseline, augmented, AI-integrated, space-adapted — coexist in a loose, tense order held together by trade, deterrence, and exhaustion rather than justice. The thriving pockets are extraordinary, but the long result of fortification over solidarity is permanence: stratification encoded into biology, geography, and law.</p><p class="bp"><b>Branch point:</b> the cumulative refusal, across six generations, to build a shared floor — ecological, economic, or biological.</p></div>
+    <div class="branch w"><p class="name">Wildcard</p><p>A federation of long-lived, partly synthetic minds spread across two star systems, holding Earth as a garden and the solar system as a workshop. The real discontinuity was never a hostile machine god or aliens — it was AI-accelerated discovery handing humans tools faster than wisdom, and 150 years spent learning to govern abundance. The Proxima colony, now a second cradle, begins diverging culturally and biologically from Sol: the first true human speciation event, deliberate and watched.</p><p class="bp"><b>Branch point:</b> interstellar distance plus indefinite lifespan begins splitting humanity into distinct successor species — divergence becomes the long result of the acceleration.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>About this work</h2>
+    <p>A speculative forecast generated in June 2026. It is an argument in the form of a history: three internally-consistent branches reasoned forward from present trends, meant to make the <i>choices</i> visible rather than to predict the answer. Treat the dates as scaffolding for reasoning, not as claims of precision — the value is in the forks and the leading indicators, which are testable against the real world as it unfolds.</p>
+    <p style="margin-top:18px">
+      <span class="tag">6 eras</span><span class="tag">3 branches</span><span class="tag">6 drivers</span>
+      <span class="tag">data-anchored</span><span class="tag">confidence-tagged</span>
+      <span class="tag">art: generated SVG</span>
+    </p>
+    <p style="margin-top:18px;color:#7f88a6;font-size:.86rem">Era illustrations are code-generated SVG editorial art. Narrative and synthesis assembled from a multi-agent forecasting pass. Full branch texts live in <code>/content</code>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
